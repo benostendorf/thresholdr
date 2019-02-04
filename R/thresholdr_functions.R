@@ -13,11 +13,11 @@ calculate_volume <- function(width, length) {
     }
 
 
-##' Calculate time at which volume exceeds threshold
+##' Calculate latency and status for meeting threshold
 ##'
-##' This function calculates the time after which an object volume exceeds a given threshold;
-##' if the endpoint is reached it returns the day and annotates status as "1"; if the endpoint
-##' is not reached the last time of measurement is recorded and status annotated with "0".
+##' This function takes a matrix with longitudinal measurements (e.g., volumes) and
+##' timepoints as input and returns a matrix with status (given threshold reached vs.
+##' censored) and latency.
 ##' @param dataset matrix
 ##' @param object (unquoted) variable in 'dataset' to calculate threshold time for
 ##' @param identifier (unquoted) variable in 'dataset' defining samples/replicates;
@@ -64,10 +64,11 @@ time_to_one_threshold <- function(dataset,
   }
 
 
-##' Calculate latency between thresholds
+##' Calculate latency and status between thresholds
 ##'
-##' This function calculates the latency between a lower and upper threshold
-##' for a given object
+##' This function takes a matrix with longitudinal measurements (e.g., volume) and
+##' timepoints as input and returns a matrix holding the status (second threshold
+##' reached vs. censored) and latency between two given thresholds.
 ##' @param dataset matrix
 ##' @param object (unquoted) variable in 'dataset' to calculate latency for
 ##' @param identifier (unquoted) variable in 'dataset' defining samples/replicates;

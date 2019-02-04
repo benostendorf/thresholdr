@@ -2,22 +2,22 @@
 % Please edit documentation in R/thresholdr_functions.R
 \name{time_to_one_threshold}
 \alias{time_to_one_threshold}
-\title{Calculate time at which volume exceeds threshold}
+\title{Calculate latency and status for meeting threshold}
 \usage{
 time_to_one_threshold(dataset, object, identifier = UID, time = age,
   group = group, size_threshold)
 }
 \arguments{
-\item{dataset}{matrix containing variables "UID", "group", and "age"}
+\item{dataset}{matrix}
 
-\item{object}{character; variable in 'dataset' to calculate threshold time for}
+\item{object}{(unquoted) variable in 'dataset' to calculate threshold time for}
 
-\item{identifier}{character; variable in 'dataset' defining samples/replicates;
+\item{identifier}{(unquoted) variable in 'dataset' defining samples/replicates;
 one sample can have several pertaining objects}
 
-\item{time}{character; variable in 'dataset' indicating time at measurement}
+\item{time}{(unquoted) variable in 'dataset' indicating time at measurement}
 
-\item{group}{character; variable in 'dataset' indicating groups samples pertain to}
+\item{group}{(unquoted) variable in 'dataset' indicating groups samples pertain to}
 
 \item{size_threshold}{numeric; set threshold size}
 }
@@ -25,9 +25,9 @@ one sample can have several pertaining objects}
 matrix containing time and status (threshold reached/censored)
 }
 \description{
-This function calculates the age at which an object volume exceeds a given threshold;
-if the endpoint is reached it returns the day and annotates status as "1"; if the endpoint
-is not reached the last day of measurement is recorded and status annotated with "0".
+This function takes a matrix with longitudinal measurements (e.g., volumes) and
+timepoints as input and returns a matrix with status (given threshold reached vs.
+censored) and latency.
 }
 \author{
 Benjamin Ostendorf

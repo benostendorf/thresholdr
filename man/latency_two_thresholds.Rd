@@ -2,7 +2,7 @@
 % Please edit documentation in R/thresholdr_functions.R
 \name{latency_two_thresholds}
 \alias{latency_two_thresholds}
-\title{Calculate latency between thresholds}
+\title{Calculate latency and status between thresholds}
 \usage{
 latency_two_thresholds(dataset, object, identifier = UID, time = age,
   group = group, lower_threshold, upper_threshold)
@@ -10,22 +10,23 @@ latency_two_thresholds(dataset, object, identifier = UID, time = age,
 \arguments{
 \item{dataset}{matrix}
 
-\item{object}{character; variable in 'dataset' to calculate latency for}
+\item{object}{(unquoted) variable in 'dataset' to calculate latency for}
 
-\item{identifier}{character; variable in 'dataset' defining samples/replicates;
+\item{identifier}{(unquoted) variable in 'dataset' defining samples/replicates;
 one sample can have several pertaining objects}
 
-\item{time}{character; variable in 'dataset' indicating time at measurement}
+\item{time}{(unquoted) variable in 'dataset' indicating time at measurement}
 
-\item{group}{character; variable in 'dataset' indicating groups samples pertain to}
+\item{group}{(unquoted) variable in 'dataset' indicating groups samples pertain to}
 
 \item{lower_threshold}{numeric; lower threshold}
 
 \item{upper_threshold}{numeric; upper threshold}
 }
 \description{
-This function calculates the latency between a lower and upper threshold
-for a given object
+This function takes a matrix with longitudinal measurements (e.g., volume) and
+timepoints as input and returns a matrix holding the status (second threshold
+reached vs. censored) and latency between two given thresholds.
 }
 \author{
 Benjamin Ostendorf

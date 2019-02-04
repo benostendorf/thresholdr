@@ -1,0 +1,23 @@
+---
+title: "The thresholdr package"
+author: "Benjamin Ostendorf"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+Say you have size measurements of multiple objects over an extended time. You might be interested in assessing the time (or latency)
+
+* until (and if) these objects reach a given threshold size
+* the latency it takes objects to advance from one threshold to another
+
+As an applied example, you might ask who long it takes trees to reach a certain size after planting and how long it takes them to reach a certain size *after* they have reached a given size.
+
+The *thresholdr* package provides auxiliary functions to generate tables that can be used to easily calculate and plot these metrics.  
+
+
+## 

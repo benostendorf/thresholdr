@@ -1,0 +1,22 @@
+Package: thresholdr
+Type: Package
+Title: Calculate Latencies between Volume Thresholds
+Version: 0.1.0
+Author: Benjamin Ostendorf <benjamin.ostendorf@gmail.com>
+Maintainer: Benjamin Ostendorf <benjamin.ostendorf@gmail.com>
+Description: Provides auxiliary functions for analyzing rectangular data on object volumes.
+    Allows to calculate latencies until and between thresholds. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports: 
+    dplyr, 
+    scales,
+    survival, 
+    survminer
+LazyData: true
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

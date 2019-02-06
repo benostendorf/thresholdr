@@ -10,14 +10,16 @@ vignette: >
 ---
 
 ## Introduction
+
 Say you have size measurements of multiple objects over an extended time. You might be interested in assessing the time (or latency)
 
 * until (and if) these objects reach a given threshold size
 * the latency it takes objects to advance from one threshold to another
 
-As an applied example, you might ask who long it takes trees to reach a certain size after planting and how long it takes them to reach a certain size *after* they have reached a given size.
+As an applied example, you might ask who long it takes several fruits on several plants to reach a certain size and how long it takes them to grow a certain size *after* reaching a given threshold.
 
-The *thresholdr* package provides auxiliary functions to generate tables that can be used to easily calculate and plot these metrics.  
+The *thresholdr* package provides auxiliary functions to that take matrices with longitudinal measurements (e.g., sizes, volumes) and calculates (i) the latency until one threshold is met, (ii) the latency between two given thresholds, and (iii) annotates the status of the outcome (i.e., endpoint met versus not met/censored). 
 
 
-## 
+## Calculate time and status for a single threshold with `latency_one_threshold()`
+

@@ -13,7 +13,7 @@ thresholdr is a collection of auxiliary functions that serve to calculate latenc
 
 ```
 # install.packages("devtools") 
-devtools::install_github("bnostendorf/thresholdr", build_vignettes = TRUE)
+devtools::install_github("benostendorf/thresholdr", build_vignettes = TRUE)
 ```
 
 ## Usage
